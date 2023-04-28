@@ -1,3 +1,11 @@
+@import url(./header/header.css);
+@import url(./main-page/section-1.css);
+@import url(./main-page/section-2.css);
+@import url(./footer/footer.css);
+@import url(./portfolio/section-1.css);
+
+
+
 body {
     background-color: tomato;
 }
