@@ -3,6 +3,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 const isProduction = process.env.NODE_ENV == 'production';
 
@@ -28,7 +29,38 @@ const config = {
         new HtmlWebpackPlugin({
             filename: "portfolio.html",
             template: "portfolio.html"
-        })
+        }),
+        new HtmlWebpackPartialsPlugin([{
+            path: 'src/partials/index/Hero.html'
+        },
+        {
+            path: 'src/partials/index/section-1.html',
+        },
+        {
+            path: 'src/partials/index/section-2.html',
+        },
+        {
+            path: 'src/partials/index/section-3.html',
+        }
+    ]),
+        new HtmlWebpackPartialsPlugin([{
+            path: 'src/partials/index/Hero.html',
+            template_filename: "portfolio.html"
+        },
+        {
+            path: 'src/partials/index/section-1.html',
+            template_filename: "portfolio.html"
+        },
+        {
+            path: 'src/partials/index/section-2.html',
+            template_filename: "portfolio.html"
+        },
+        {
+            path: 'src/partials/index/section-3.html',
+            template_filename: "portfolio.html"
+        }]),
+
+
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
