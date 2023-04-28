@@ -14,7 +14,13 @@
         </nav>
 
         <h1>My name is Alex</h1>
-        <h2>Tip: Check your console</h2>
+        <%= require('html-loader!./src/partials/index/Hero.html').default %>
+        <%= require('html-loader!./src/partials/index/section-1.html').default %>
+        <%= require('html-loader!./src/partials/index/section-2.html').default %>
+
+
+
+
     </body>
     
 </html>
